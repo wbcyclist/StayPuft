@@ -18,10 +18,9 @@
             <section class="post-meta">
                 <span class="post-time">
                     <i class='fa fa-calendar'></i>
-                    <time datetime="{{date format="YYYY-MM-DD"}}" class="timeago">{{date timeago="true"}}</time>
-                    <time datetime="{{date format="YYYY-MM-DD"}}" class="fulldate">{{date format="MMMM Do, YYYY"}}</time>
+                    <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="YYYY年MM月DD日"}}</time>
                 </span>
-                {{tags prefix="<br><i class='fa fa-tag'></i> " separator=" · "}}
+                {{tags prefix="<br><i class='fa fa-tags'></i> " separator=" · "}}
             </section>
         </header>
 
@@ -56,6 +55,9 @@
 
             {{/author}}
 
+
+
+
             <section class="share">
                 <h4>Share this post</h4>
                 <div class="share-icons">
@@ -75,6 +77,16 @@
             </section>
 
         </footer>
+
+        <nav class="pagination" role="navigation">
+            {{#if next}}
+                &larr;上一篇<a class="newer-posts" href="{{next.url}}">{{next.title}}</a>
+            {{/if}}
+
+            {{#if previous}}
+                下一篇&rarr;<a class="older-posts" href="{{previous.url}}">{{previous.title}}</a>
+            {{/if}}
+        </nav>
 
         <section class="post-comments">
             <div id="disqus_thread"></div>

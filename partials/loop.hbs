@@ -1,12 +1,12 @@
 {{! This is the post loop - each post will be output using this markup }}
 {{#foreach posts}}
 
+{{!--
 <article class="{{post_class}}">
     <header class="post-header">
         {{#if image}}
             <img class="post-cover" src="{{image}}" alt="{{title}}">
         {{/if}}
-
         <h1 class="post-title"><a href="{{url}}">{{{title}}}</a></h1>
         
         <section class="post-meta">
@@ -25,6 +25,21 @@
         <i class="fa fa-comment-o"></i> <a href="{{url}}#disqus_thread">Comments</a>
     </footer>
 </article>
+--}}
+
+<article class="{{post_class}}">
+    <header class="post-header">
+        <h1 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>{{excerpt characters="140"}} <a class="read-more" href="{{url}}"><i class="fa fa-angle-double-right"></i></a></p>
+    </section>
+    <footer class="post-meta">
+        {{tags prefix="<br><i class='fa fa-tags'></i> " separator=" · " suffix=" - "}}
+        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="YYYY年MM月DD日"}}</time>
+    </footer>
+</article>
+
 
 {{/foreach}}
 

@@ -1033,7 +1033,7 @@ main
     float: none;
     display: block;
     position: absolute;
-    top: 0;
+    top: 190px;
     bottom: 0;
     left: 0;
     right: 0;
@@ -1297,6 +1297,10 @@ main
     #sidebar-links li {
         display: inline-block;
         margin: 0px 4px;
+    }
+
+    .hidden-sm {
+        display: none!important;
     }
 }
 

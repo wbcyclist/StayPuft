@@ -17,16 +17,13 @@
 
     {{! Styles'n'Scripts }}
     <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
-    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="{{asset "css/font-awesome.min.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/prism.css"}}" />
 
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
+    
 
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-
-    <link rel="stylesheet" type="text/css" href="{{asset "css/prism.css"}}" />
-
-    {{> google-analytics}}
 </head>
 
 <body class="{{body_class}}">
@@ -37,29 +34,31 @@
             <h2 class="blog-title"><a href="{{@blog.url}}">{{@blog.title}}</a></h2>
             <h3 class="blog-description">{{@blog.description}}</h3>
 
-            <form id="search">
+            <!-- <form id="search">
                 <input id="search-field" placeholder="Search"/>
-            </form>
+            </form> -->
 
             <div id="sidebar-links">
+                <!--
                 <ul id="subscription-links">
                     <li><a target="_blank" href="{{@blog.url}}/rss/"><i class="fa fa-rss"></i> Subscribe via RSS</a></li>
-                    <!-- No support yet
-                    <li><a target="_blank" href=" "><i class="fa fa-envelope"></i> Subscribe via email<a></li>
-                    -->
                 </ul>
+                -->
                 <ul id="sidebar-internal">
                     <!-- For 'About' and other pages -->
+                    <li><a href="{{@blog.url}}"><i class="fa fa-home"></i> 首页</a></li>
+                    <li><a href="{{@blog.url}}"><i class="fa fa-user"></i> 关于</a></li>
+                    <li><a href="{{@blog.url}}"><i class="fa fa-file-powerpoint-o"></i> 个人作品</a></li>
                 </ul>
                 <ul id="sidebar-external">
                     {{> sidebar-external}}
                 </ul>
             </div>
 
-            <footer class="site-footer">
+            <footer class="site-footer hidden-sm">
                 <section class="copyright">{{> copyright}}</section>
-                <section class="poweredby">Proudly published with <a class="icon-ghost" href="https://ghost.org">Ghost</a></section>
-                <section class="theme-credits"><a href="https://github.com/dlecina/StayPuft">StayPuft theme</a> by David Lecina</section>
+                <section class="poweredby">Proudly published with <a class="icon-ghost" href="https://ghost.org" target="_blank">Ghost</a></section>
+                <section class="theme-credits"><a href="https://github.com/dlecina/StayPuft" target="_blank">StayPuft theme</a> by David Lecina</section>
             </footer>
         </div>
     </div>
@@ -78,13 +77,13 @@
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/prism-loader.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/prism.js"}}"></script>
-    <script src="{{asset "js/jquery.ghostHunter.min.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/jquery.ghostHunter.min.js"}}"></script>
     <script>
         $("#search-field").ghostHunter({
             rss : "{{@blog.url}}/rss/",
             results : "#results",
             onKeyUp : true,
-            zeroResultsInfo : false
+            zeroResultsInfo : true
         });
     </script>
 </body>
