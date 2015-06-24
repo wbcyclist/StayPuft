@@ -33,19 +33,17 @@
     <meta name="msapplication-TileImage" content="{{asset "/mstile-144x144.png"}}">
     <meta name="theme-color" content="#ffffff">
 
-
-
-
-
     {{! Styles'n'Scripts }}
     <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/opensans.css"}}" />
+    <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet'>-->
+    <!--<link href='http://fonts.useso.com/css?family=Open+Sans:400,700' rel='stylesheet'>-->
+
     <link rel="stylesheet" type="text/css" href="{{asset "css/font-awesome.min.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/prism.css"}}" />
 
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
-    
 
 </head>
 
@@ -71,7 +69,7 @@
                     <!-- For 'About' and other pages -->
                     <li><a href="{{@blog.url}}"><i class="fa fa-home"></i> 首页</a></li>
                     <li><a href="{{@blog.url}}"><i class="fa fa-user"></i> 关于</a></li>
-                    <li><a href="{{@blog.url}}"><i class="fa fa-file-powerpoint-o"></i> 个人作品</a></li>
+                    <li><a href="\project"><i class="fa fa-file-powerpoint-o"></i> 个人作品</a></li>
                 </ul>
                 <ul id="sidebar-external">
                     {{> sidebar-external}}
