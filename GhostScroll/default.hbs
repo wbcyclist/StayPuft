@@ -52,6 +52,10 @@
 
     <link rel="stylesheet" href='{{asset "css/font-awesome.min.css"}}'>
 
+    {{! slideshow }}
+    <link rel="stylesheet" type="text/css" href='{{asset "slideshow/css/slideshow.css"}}'/>
+
+
     {{! Ghost outputs important style and meta data with this tag }}
     {{! ghost_head}}
 </head>
@@ -74,7 +78,13 @@
     <script type="text/javascript" src='{{asset "GhostScroll/js/icons.js"}}'></script>
     <script type="text/javascript" src='{{asset "GhostScroll/js/index.js"}}'></script>
 
+    {{! retina.js }}
     <script type="text/javascript" src='{{asset "js/retina.min.js"}}'></script>
+
+    {{! slideshow }}
+    <script type="text/javascript" src='{{asset "slideshow/js/jquery.sequence-min.js"}}'></script>
+    <script type="text/javascript" src='{{asset "slideshow/js/slideshow-options.js"}}'></script>
+
 
 </body>
 </html>
