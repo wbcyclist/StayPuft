@@ -5,7 +5,7 @@
   max-width: 100%;
   /*min-height: 0px;*/
   overflow: hidden;
-  margin: 5em auto .5em auto;
+  margin: .5em auto .5em auto;
 }
 .w3-slideshow.sequence-fallback {
   overflow: hidden; 
